@@ -1,0 +1,129 @@
+/* =========================================================
+   SOLARPRO SA
+   Main JavaScript
+   ========================================================= */
+
+
+/* ================= ELEMENTS ================= */
+
+const systemSelect = document.getElementById("system");
+const urgencySelect = document.getElementById("urgency");
+
+const quotePrice = document.getElementById("quotePrice");
+
+const basePriceField = document.getElementById("basePrice");
+const urgencyMultiplierField =
+  document.getElementById("urgencyMultiplier");
+
+const estimatedPriceField =
+  document.getElementById("estimatedPrice");
+
+const quoteForm = document.getElementById("quoteForm");
+
+const yearElement = document.getElementById("year");
+
+
+/* ================= CURRENCY FORMAT ================= */
+
+function formatCurrency(amount) {
+
+  return new Intl.NumberFormat("en-ZA", {
+    style: "currency",
+    currency: "ZAR",
+    maximumFractionDigits: 0
+  }).format(amount);
+
+}
+
+
+/* ================= CALCULATE QUOTE ================= */
+
+function calculateQuote() {
+
+  const basePrice =
+    Number(systemSelect.value) || 0;
+
+  const urgencyMultiplier =
+    Number(urgencySelect.value) || 1;
+
+
+  /*
+   * Final price calculation:
+   *
+   * Base Price × Urgency Multiplier
+   */
+
+  const finalPrice =
+    basePrice * urgencyMultiplier;
+
+
+  /* ================= VISIBLE PRICE ================= */
+
+  quotePrice.textContent =
+    formatCurrency(finalPrice);
+
+
+  /* ================= HIDDEN FORM FIELDS ================= */
+
+  /*
+   * These fields are submitted to Netlify
+   * along with the customer's form data.
+   */
+
+  basePriceField.value =
+    basePrice;
+
+  urgencyMultiplierField.value =
+    urgencyMultiplier;
+
+  estimatedPriceField.value =
+    finalPrice;
+
+
+  return finalPrice;
+
+}
+
+
+/* ================= EVENT LISTENERS ================= */
+
+systemSelect.addEventListener(
+  "change",
+  calculateQuote
+);
+
+
+urgencySelect.addEventListener(
+  "change",
+  calculateQuote
+);
+
+
+/* ================= FORM SUBMISSION ================= */
+
+quoteForm.addEventListener(
+  "submit",
+  function () {
+
+    /*
+     * Recalculate immediately before submission.
+     *
+     * This ensures the hidden Netlify fields contain
+     * the latest calculator values.
+     */
+
+    calculateQuote();
+
+  }
+);
+
+
+/* ================= CURRENT YEAR ================= */
+
+yearElement.textContent =
+  new Date().getFullYear();
+
+
+/* ================= INITIAL CALCULATION ================= */
+
+calculateQuote();
