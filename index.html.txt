@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SolarPro SA | Solar & Backup Power Solutions</title>
+  <meta
+    name="description"
+    content="Professional solar installation and backup power solutions across South Africa. Get an instant solar quote today."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a href="#" class="logo" aria-label="SolarPro SA home">
+        <span class="logo-mark">☀</span>
+        <span>Solar<span>Pro</span> SA</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#calculator">Get Quote</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a
+        href="tel:+27123456789"
+        class="nav-call"
+        aria-label="Call SolarPro SA"
+      >
+        Call Us
+      </a>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            ☀ South African Solar Specialists
+          </span>
+
+          <h1>
+            Take Control of Your
+            <span>Energy Future.</span>
+          </h1>
+
+          <p class="hero-text">
+            Reliable solar, battery backup and inverter solutions
+            designed to keep your home or business powered when
+            you need it most.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="tel:+27123456789"
+              class="btn btn-primary"
+            >
+              📞 Call Now
+            </a>
+
+            <a
+              href="https://wa.me/27123456789?text=Hi%20SolarPro%20SA%2C%20I'd%20like%20a%20solar%20quote."
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              💬 WhatsApp Us
+            </a>
+
+          </div>
+
+          <div class="trust-points">
+            <span>✓ Professional Installation</span>
+            <span>✓ Quality Equipment</span>
+            <span>✓ Local Support</span>
+          </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <div class="sun-icon">☀</div>
+
+          <p class="card-label">POWER YOUR HOME</p>
+
+          <h2>
+            Don't wait for the next
+            power interruption.
+          </h2>
+
+          <p>
+            Find out what your solar solution could cost
+            using our instant quote calculator.
+          </p>
+
+          <a href="#calculator" class="btn btn-light">
+            Calculate My Quote →
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">OUR SERVICES</span>
+
+          <h2>
+            Complete Solar
+            <span>Power Solutions</span>
+          </h2>
+
+          <p>
+            From residential backup power to complete solar
+            installations, we provide solutions built around
+            your energy requirements.
+          </p>
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon">☀</div>
+
+            <h3>Solar Panels</h3>
+
+            <p>
+              High-quality solar panel systems designed to
+              generate clean electricity for your property.
+            </p>
+
+            <a href="#calculator">Get a quote →</a>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-icon">🔋</div>
+
+            <h3>Battery Storage</h3>
+
+            <p>
+              Store excess solar energy and keep essential
+              appliances running when the grid goes down.
+            </p>
+
+            <a href="#calculator">Get a quote →</a>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-icon">⚡</div>
+
+            <h3>Inverters</h3>
+
+            <p>
+              Reliable inverter solutions for homes,
+              offices and small businesses.
+            </p>
+
+            <a href="#calculator">Get a quote →</a>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-icon">🏠</div>
+
+            <h3>Complete Systems</h3>
+
+            <p>
+              Complete solar packages combining panels,
+              batteries, inverters and professional installation.
+            </p>
+
+            <a href="#calculator">Get a quote →</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= CALCULATOR ================= -->
+    <section id="calculator" class="calculator-section">
+
+      <div class="container calculator-grid">
+
+        <div class="calculator-intro">
+
+          <span class="eyebrow">
+            INSTANT QUOTE
+          </span>
+
+          <h2>
+            Estimate Your
+            <span>Solar Investment</span>
+          </h2>
+
+          <p>
+            Select the type of system you are interested in
+            and tell us how quickly you'd like installation.
+          </p>
+
+          <div class="calculator-note">
+            <strong>Important:</strong>
+            This is an indicative estimate only. Your final
+            quotation depends on your property, equipment
+            requirements and site assessment.
+          </div>
+
+        </div>
+
+
+        <div class="calculator-card">
+
+          <form
+            name="solar-quote"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            id="quoteForm"
+          >
+
+            <!-- Required by Netlify -->
+            <input
+              type="hidden"
+              name="form-name"
+              value="solar-quote"
+            >
+
+            <!-- Spam protection -->
+            <p class="hidden-field">
+              <label>
+                Don't fill this out if you're human:
+                <input name="bot-field">
+              </label>
+            </p>
+
+
+            <div class="form-group">
+
+              <label for="system">
+                Solar System
+              </label>
+
+              <select id="system" name="system" required>
+
+                <option value="0">
+                  Select a system
+                </option>
+
+                <option value="45000">
+                  Essential Backup — R45,000
+                </option>
+
+                <option value="75000">
+                  Home Solar — R75,000
+                </option>
+
+                <option value="120000">
+                  Premium Solar — R120,000
+                </option>
+
+                <option value="180000">
+                  Large Home / Business — R180,000
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="urgency">
+                Installation Urgency
+              </label>
+
+              <select id="urgency" name="urgency" required>
+
+                <option value="1">
+                  Standard — No additional charge
+                </option>
+
+                <option value="1.05">
+                  Priority — +5%
+                </option>
+
+                <option value="1.10">
+                  Urgent — +10%
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- Visible price -->
+            <div class="quote-result">
+
+              <span>Estimated Investment</span>
+
+              <strong id="quotePrice">
+                R0
+              </strong>
+
+              <small>
+                Indicative estimate
+              </small>
+
+            </div>
+
+
+            <!-- Hidden calculated fields -->
+            <input
+              type="hidden"
+              name="base-price"
+              id="basePrice"
+            >
+
+            <input
+              type="hidden"
+              name="urgency-multiplier"
+              id="urgencyMultiplier"
+            >
+
+            <input
+              type="hidden"
+              name="estimated-price"
+              id="estimatedPrice"
+            >
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="name">
+                  Name
+                </label>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="082 123 4567"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Additional Information
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="3"
+                placeholder="Tell us anything we should know..."
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-full"
+            >
+              Request My Quote →
+            </button>
+
+
+            <p class="form-disclaimer">
+              By submitting this form, you agree to be contacted
+              regarding your solar enquiry.
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+    <section class="cta-section" id="contact">
+
+      <div class="container cta-content">
+
+        <div>
+
+          <span class="eyebrow">
+            READY TO GO SOLAR?
+          </span>
+
+          <h2>
+            Let's build your
+            <span>energy solution.</span>
+          </h2>
+
+          <p>
+            Speak to our team about your property's solar
+            requirements.
+          </p>
+
+        </div>
+
+
+        <div class="cta-actions">
+
+          <a
+            href="tel:+27123456789"
+            class="btn btn-light"
+          >
+            📞 Call +27 12 345 6789
+          </a>
+
+          <a
+            href="https://wa.me/27123456789?text=Hi%20SolarPro%20SA%2C%20I'd%20like%20to%20discuss%20a%20solar%20installation."
+            class="btn btn-whatsapp"
+            target="_blank"
+            rel="noopener"
+          >
+            💬 WhatsApp
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+
+    <div class="container footer-content">
+
+      <div>
+        <strong>SolarPro SA</strong>
+        <p>
+          Solar & backup power solutions.
+        </p>
+      </div>
+
+      <div>
+        <p>
+          © <span id="year"></span> SolarPro SA.
+          All rights reserved.
+        </p>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="main.js"></script>
+
+</body>
+</html>
